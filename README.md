@@ -1,10 +1,14 @@
-Dies ist ein kleines Hilfsprogramm zum aufschreiben der Punkte am Skat Abend. Kopfrechnen und ordentliches Aufschreiben auf einem Zettel fällt insbesondere nach ein paar Bier nicht unbedingt leichter.
+## Was bitte?
 
-Deshalb schreiben wir ein Programm mit dem die Punkte einfach notiert werden.
+Skatrunde ist ein kleines Hilfsprogramm zum aufschreiben der Punkte am Skat Abend. Kopfrechnen und ordentliches Aufschreiben auf einem Zettel fällt insbesondere nach ein paar Bier nicht unbedingt leichter.
 
-Die Software startet mit wenig Funktionen und wird nach und nach erweitert. 
+Deshalb schreiben wir ein Programm mit dem die Punkte einfach notiert werden können. Die Software sollte im Browser laufen, so dass man z.B. ein Tablet auf den Tisch legen kann. Die Software muss einfach sein, so dass zu jeder noch so fortgeschrittenen Stunde des Abends die Punkte immer korrekt erfasst werden. 
+
+Wir starten mit einigen wenigen Funktionen, wird aber evtl. noch mal erweitert. 
 
 ## Begriffe
+
+Hier ein paar Begriffe zu Klärung:
 
 - Runde: eine Runde von Menschen, die sich zum Skat spielen treffen
 - Spieler: Teilnehmer einer Runde, spielt Skat und trinkt 2 Bier dabei
@@ -37,3 +41,11 @@ Im folgenden werden beispielhaft einige Funktionen aufgelistet, die zukünftig i
 - Erfassen von Zusatzinfos zum Spiel (z.B. Bock, Ramsch)
 - Anzeige des Gebers (Achtung: bei Grand Hand im Ramsch wird wiederholt)
 - Berechnung der Punktdifferenzen zum nächsten Gewinner und Gesamt-Abrechnung
+
+## Technik
+
+- Die Anwendung wird in Angluar geschrieben
+- Das Hosting erfolgt auf GitHub Pages
+- Die Logik wird mit Hilfe von ngrx implementiert.
+- Die erfassten Daten im Browser Storage gespeichert sein, so diese auch nach neu laden noch da sind (ngrx-store-localstorage)
+- ...
