@@ -49,3 +49,13 @@ Im folgenden werden beispielhaft einige Funktionen aufgelistet, die zukünftig i
 - Die Logik wird mit Hilfe von ngrx implementiert.
 - Die erfassten Daten im Browser Storage gespeichert sein, so diese auch nach neu laden noch da sind (ngrx-store-localstorage)
 - ...
+- https://www.npmjs.com/package/angular-cli-ghpages
+
+
+## DEV
+
+```
+
+ng build --prod --base-href "https://tboeker.github.io/skatrunde/"
+
+```

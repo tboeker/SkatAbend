@@ -1,0 +1,1 @@
+@cmd /K "set path=%cd%\node_modules\.bin;%path% && TITLE _npm_skatrunde && echo use local npm packages"
