@@ -1,16 +1,16 @@
 ## Was bitte?
 
-Skatrunde ist ein kleines Hilfsprogramm zum aufschreiben der Punkte am Skat Abend. Kopfrechnen und ordentliches Aufschreiben auf einem Zettel fällt insbesondere nach ein paar Bier nicht unbedingt leichter.
+Skatrunde ist ein kleines Hilfsprogramm zum Aufschreiben der Punkte am Skat Abend. Kopfrechnen, schriftliche Addition und ordentliche handschriftliche Notizen auf einem Zettel fallen insbesondere nach ein paar Bier nicht unbedingt leichter.
 
-Deshalb schreiben wir ein Programm mit dem die Punkte einfach notiert werden können. Die Software sollte im Browser laufen, so dass man z.B. ein Tablet auf den Tisch legen kann. Die Software muss einfach sein, so dass zu jeder noch so fortgeschrittenen Stunde des Abends die Punkte immer korrekt erfasst werden. 
+Deshalb schreiben wir ein Programm mit dem die Punkte einfach notiert werden können. Die Software sollte im Browser laufen, so dass man z.B. ein Tablet zur Erfassung auf den Tisch legen kann. Die Software muss einfach sein, so dass zu jeder noch so fortgeschrittenen Stunde des Abends die Punkte immer korrekt erfasst werden. 
 
 Wir starten mit einigen wenigen Funktionen, wird aber evtl. noch mal erweitert. 
 
 ## Begriffe
 
-Hier ein paar Begriffe zu Klärung:
+Hier ein paar Begriffe zur Klärung:
 
-- Runde: eine Runde von Menschen, die sich zum Skat spielen treffen
+- Runde: eine Gruppe von Menschen, meist 3 oder 4 Personen, die sich zum Skat spielen treffen
 - Spieler: Teilnehmer einer Runde, spielt Skat und trinkt 2 Bier dabei
 - Spiel: in einer Runde werden viele Spiele gespielt. Jedes Spiel wird zur späteren Auswertung und Abrechnung erfasst
 - Verlauf: Verlauf aller Spiele in einer Runde. Geht von Spiel 1 bis X
