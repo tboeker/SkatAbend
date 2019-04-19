@@ -6,6 +6,8 @@ Deshalb schreiben wir ein Programm mit dem die Punkte einfach notiert werden kö
 
 Wir starten mit einigen wenigen Funktionen, wird aber evtl. noch mal erweitert. 
 
+Link zur App: https://tboeker.github.io/skatrunde-app
+
 ## Begriffe
 
 Hier ein paar Begriffe zur Klärung:
@@ -45,17 +47,30 @@ Im folgenden werden beispielhaft einige Funktionen aufgelistet, die zukünftig i
 ## Technik
 
 - Die Anwendung wird in Angluar geschrieben
-- Das Hosting erfolgt auf GitHub Pages
+- Das Hosting erfolgt auf GitHub Pages, dafür wird das Repository skatrunde-app verwendet
 - Die Logik wird mit Hilfe von ngrx implementiert.
 - Die erfassten Daten im Browser Storage gespeichert sein, so diese auch nach neu laden noch da sind (ngrx-store-localstorage)
-- ...
-- https://www.npmjs.com/package/angular-cli-ghpages
-
+- 
 
 ## DEV
 
-```
+### Deployment neue Version
 
-ng build --prod --base-href "https://tboeker.github.io/skatrunde/"
+Kopieren der Dateien aus dist in das app repo
+
+```powershell
+
+# builden mit base href
+ng build --prod --base-href "https://tboeker.github.io/skatrunde-app/"
+# vorhandene dateien aus app repo löschen
+Remove-Item -Path ..\skatrunde-app\* -Filter *.* -Force -Exclude .git
+Get-ChildItem -Path ..\skatrunde-app -Exclude .git | ForEach-Object { Remove-Item -Path $_.FullName -Recurse }
+# dist ordner kopieren
+Copy-Item -Path .\dist\skatrunde\* -Filter *.* -Recurse -Force -Destination ..\skatrunde-app\
+# git commit
+cd ..\skatrunde-app
+git add .
+git commit -m "updated version"
+git push
 
 ```
