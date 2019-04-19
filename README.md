@@ -6,7 +6,7 @@ Deshalb schreiben wir ein Programm mit dem die Punkte einfach notiert werden kö
 
 Wir starten mit einigen wenigen Funktionen, wird aber evtl. noch mal erweitert. 
 
-Link zur App: https://tboeker.github.io/skatrunde-app
+[Hier geht's zur App](https://tboeker.github.io/skatrunde-app)
 
 ## Begriffe
 
