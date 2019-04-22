@@ -136,5 +136,8 @@
       }
     }
   },
-  "defaultProject": "skatrunde"
+  "defaultProject": "skatrunde",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

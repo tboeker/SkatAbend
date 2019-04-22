@@ -74,3 +74,11 @@ git commit -m "updated version"
 git push
 
 ```
+
+CLI Befehle
+
+```powershell 
+
+ng generate store State --root --module app.module.ts
+
+```
