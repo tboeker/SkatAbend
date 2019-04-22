@@ -68,7 +68,7 @@ Get-ChildItem -Path ..\skatrunde-app -Exclude .git | ForEach-Object { Remove-Ite
 # dist ordner kopieren
 Copy-Item -Path .\dist\skatrunde\* -Filter *.* -Recurse -Force -Destination ..\skatrunde-app\
 # git commit
-cd ..\skatrunde-app
+Set-Location ..\skatrunde-app
 git add .
 git commit -m "updated version"
 git push
