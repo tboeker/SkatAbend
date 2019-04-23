@@ -13,3 +13,4 @@ git pull
 git add .
 git commit -m "updated version"
 git push
+Set-Location ..\skatrunde
