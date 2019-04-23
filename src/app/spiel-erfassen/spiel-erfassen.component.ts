@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { State } from '../reducers/app.reducer';
 import { SpielErfassenAction } from '../app.actions';
@@ -14,6 +14,8 @@ export class SpielErfassenComponent implements OnInit {
   gewonnen: boolean;
   verloren: boolean;
   punkte: number;
+
+  @Output() meldung: string;
 
   constructor(private store: Store<State>) { }
 
