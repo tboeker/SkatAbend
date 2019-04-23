@@ -2,9 +2,9 @@
 
 Skatrunde ist ein kleines Hilfsprogramm zum Aufschreiben der Punkte am Skat Abend. Kopfrechnen, schriftliche Addition und ordentliche handschriftliche Notizen auf einem Zettel fallen insbesondere nach ein paar Bier nicht unbedingt leichter.
 
-Deshalb schreiben wir ein Programm mit dem die Punkte einfach notiert werden können. Die Software sollte im Browser laufen, so dass man z.B. ein Tablet zur Erfassung auf den Tisch legen kann. Die Software muss einfach sein, so dass zu jeder noch so fortgeschrittenen Stunde des Abends die Punkte immer korrekt erfasst werden. 
+Deshalb schreiben wir ein Programm mit dem die Punkte einfach notiert werden können. Die Software sollte im Browser laufen, so dass man z.B. ein Tablet zur Erfassung auf den Tisch legen kann. Die Software muss einfach sein, so dass zu jeder noch so fortgeschrittenen Stunde des Abends die Punkte immer korrekt erfasst werden.
 
-Wir starten mit einigen wenigen Funktionen, wird aber evtl. noch mal erweitert. 
+Wir starten mit einigen wenigen Funktionen, wird aber evtl. noch mal erweitert.
 
 [Hier geht's zur App](https://tboeker.github.io/skatrunde-app)
 
@@ -20,9 +20,9 @@ Hier ein paar Begriffe zur Klärung:
 
 ## Modus
 
-Jeder Spieler erhält Punkte auf sein Punkte-Konto wenn ein Spiel verloren ist. Pro Spiel erhält also entweder ein Spieler Punkte (wenn er sein Solo Spiel verliert, oder der Verlierer im Ramsch). Oder die anderen Spieler erhalten Punkte (wenn er sein Solo spiel gewinnt oder Durchmarsch im Ramsch). 
+Jeder Spieler erhält Punkte auf sein Punkte-Konto wenn ein Spiel verloren ist. Pro Spiel erhält also entweder ein Spieler Punkte (wenn er sein Solo Spiel verliert, oder der Verlierer im Ramsch). Oder die anderen Spieler erhalten Punkte (wenn er sein Solo spiel gewinnt oder Durchmarsch im Ramsch).
 
-Pro Spiel Eingabe muss also der Spieler erfasst werden, ob er gewonnen oder verloren hat und wie viele Punkte aufgeschrieben werden sollen. Nach jedem Spiel wird die Gesamtpunktahl pro Spieler entsprechend verändert. 
+Pro Spiel Eingabe muss also der Spieler erfasst werden, ob er gewonnen oder verloren hat und wie viele Punkte aufgeschrieben werden sollen. Nach jedem Spiel wird die Gesamtpunktahl pro Spieler entsprechend verändert.
 
 Wird die Runde beendet, muss ein Spieler die Differenzen zu allen "besseren" Spielern in die Kasse einzahlen.
 
@@ -50,34 +50,21 @@ Im folgenden werden beispielhaft einige Funktionen aufgelistet, die zukünftig i
 - Das Hosting erfolgt auf GitHub Pages, dafür wird das Repository skatrunde-app verwendet
 - Die Logik wird mit Hilfe von ngrx implementiert.
 - Die erfassten Daten im Browser Storage gespeichert sein, so diese auch nach neu laden noch da sind (ngrx-store-localstorage)
-- 
+-
 
 ## DEV
 
 ### Deployment neue Version
 
-Kopieren der Dateien aus dist in das app repo
+Kopieren der Dateien aus dist in das app repo mit
 
 ```powershell
-
-# builden mit base href
-ng build --prod --base-href "https://tboeker.github.io/skatrunde-app/"
-# vorhandene dateien aus app repo löschen
-Remove-Item -Path ..\skatrunde-app\* -Filter *.* -Force -Exclude .git
-Get-ChildItem -Path ..\skatrunde-app -Exclude .git | ForEach-Object { Remove-Item -Path $_.FullName -Recurse }
-# dist ordner kopieren
-Copy-Item -Path .\dist\skatrunde\* -Filter *.* -Recurse -Force -Destination ..\skatrunde-app\
-# git commit
-Set-Location ..\skatrunde-app
-git add .
-git commit -m "updated version"
-git push
-
+.\deploy.ps1
 ```
 
 CLI Befehle
 
-```powershell 
+```powershell
 
 ng generate store State --root --module app.module.ts
 

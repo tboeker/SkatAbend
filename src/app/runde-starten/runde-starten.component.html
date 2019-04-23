@@ -1,7 +1,11 @@
 <div>
-  <p>{{anzahlSpieler}}</p>
+  <h2>Neue Runde Starten</h2>
+</div>
+<div>
   <label>Anzahl Spieler:
-    <input [(ngModel)]="anzahlSpieler" placeholder="Anzahl der Spieler eingeben" />
+    <p> <input [(ngModel)]="anzahlSpieler" placeholder="min 3 max 5" /></p>
   </label>
-  <button (click)="neueRunde()">Neue Runde Starten</button>
+  <p> <button (click)="neueRunde()">Neue Runde Starten</button></p>
+  <p>{{meldung}}</p>
+  <p>{{anzahlSpieler}}</p>
 </div>

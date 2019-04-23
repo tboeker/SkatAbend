@@ -1,3 +1,19 @@
-<p>
-  spiel-erfassen works!
-</p>
+<div>
+  <h2>Spiel Erfassen</h2>
+</div>
+<div>
+  <label>Spieler:
+    <p> <input [(ngModel)]="spielerNummer"/></p>
+  </label>
+  <label>Punkte:
+    <p> <input [(ngModel)]="punkte"/></p>
+  </label>
+  <label>Gewonnen:
+    <p> <input [(ngModel)]="gewonnen" type="checkbox"/></p>
+  </label>
+  <label>Verloren:
+    <p> <input [(ngModel)]="verloren" type="checkbox"/></p>
+  </label>
+  <p> <button (click)="spielErfassen()">Ok</button></p>
+  <p>{{meldung}}</p>
+</div>

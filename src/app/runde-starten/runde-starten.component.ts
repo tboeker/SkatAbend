@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { State } from '../reducers';
-import { RundeStarten } from '../app.actions';
+import { RundeStartenAction } from '../app.actions';
 
 @Component({
   selector: 'app-runde-starten',
@@ -12,7 +12,8 @@ export class RundeStartenComponent implements OnInit {
 
   @Input() anzahlSpieler: number;
 
-  // anzahlSpieler: number;
+  @Output() meldung: string;
+
   constructor(private store: Store<State>) { }
 
   ngOnInit() {
@@ -21,7 +22,10 @@ export class RundeStartenComponent implements OnInit {
   neueRunde() {
     if (this.anzahlSpieler >= 3 && this.anzahlSpieler <= 5) {
       console.log('neue runde', this.anzahlSpieler);
-      this.store.dispatch(new RundeStarten(this.anzahlSpieler));
+      this.store.dispatch(new RundeStartenAction(this.anzahlSpieler));
+      this.meldung = null;
+    } else{
+      this.meldung = 'Mindesten 3, aber nur maximal 5 Spieler'
     }
   }
 

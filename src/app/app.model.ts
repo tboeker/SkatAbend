@@ -1,17 +1,24 @@
-export class Runde {
-    anzahlSpieler: number;
+import { SpielErfassenAction } from './app.actions';
+
+export interface Runde {
+   anzahlSpieler: number
 }
 
-export class PunkteStand {
+export interface SpielerPunkteStand {
+    spieler: Spieler,
+    punkte: PunkteStand
+}
+
+export interface PunkteStand {
     gesamtPunkte: number;
 }
 
-export class Spieler {
+export interface Spieler {
     name: string;
     spielerNummer: number
 }
 
-export class Spiel {
+export interface Spiel {
     spielNummer: number;
     spielerNummer: number;
     gewonnen: boolean;
